@@ -4,7 +4,7 @@ import GCard from "../ui/GCard";
 import "../../styles/GPage.css";
 
 const GPage = () => {
-  // Use the context instead of managing state locally
+  // Use the garage context for data and actions
   const { floors, handleCarUpdate, handleCarDelete } = useGarage();
 
   return (

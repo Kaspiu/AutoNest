@@ -1,67 +1,61 @@
 import { createContext, useState, useContext, useEffect } from "react";
+import { saveData, loadData } from "../utils/storage";
 
+// Storage key for garage data
+const GARAGE_STORAGE_KEY = "garageCars";
+
+// Create context
 const GarageContext = createContext();
 
+// Custom hook for using the garage context
 export const useGarage = () => useContext(GarageContext);
 
 export const GarageProvider = ({ children }) => {
-  // State to store car data for each floor (P1, P2, P3)
-  const [floors, setFloors] = useState({
+  // Default garage structure with empty parking slots
+  const defaultGarage = {
     P1: Array(6).fill(null),
     P2: Array(6).fill(null),
     P3: Array(6).fill(null),
+  };
+
+  // Initialize state with stored data or default
+  const [floors, setFloors] = useState(() => {
+    const savedData = loadData(GARAGE_STORAGE_KEY);
+    return savedData || defaultGarage;
   });
 
-  // Load cars data from cookies on component mount
+  // Save data whenever floors state changes
   useEffect(() => {
-    try {
-      const storedCars = document.cookie
-        .split(";")
-        .map((cookie) => cookie.trim())
-        .find((cookie) => cookie.startsWith("garageCars="));
-
-      if (storedCars) {
-        const carsData = JSON.parse(
-          decodeURIComponent(storedCars.split("=")[1])
-        );
-        setFloors(carsData);
-      }
-    } catch (error) {
-      console.error("Error loading cars from cookies:", error);
-    }
-  }, []);
-
-  // Save cars data to cookies when floors state changes
-  useEffect(() => {
-    // Set cookie to expire in 180 days
-    const expiryDate = new Date();
-    expiryDate.setDate(expiryDate.getDate() + 180);
-
-    document.cookie = `garageCars=${encodeURIComponent(
-      JSON.stringify(floors)
-    )};expires=${expiryDate.toUTCString()};path=/`;
+    saveData(GARAGE_STORAGE_KEY, floors);
   }, [floors]);
 
-  // Update car data at a specific floor and position
+  // Add or update a car at specific floor and position
   const handleCarUpdate = (floorKey, index, carData) => {
-    setFloors((prevFloors) => ({
-      ...prevFloors,
-      [floorKey]: prevFloors[floorKey].map((car, i) =>
-        i === index ? carData : car
-      ),
-    }));
+    setFloors((prevFloors) => {
+      const updatedFloor = [...prevFloors[floorKey]];
+      updatedFloor[index] = carData;
+
+      return {
+        ...prevFloors,
+        [floorKey]: updatedFloor,
+      };
+    });
   };
 
-  // Delete car data at a specific floor and position
+  // Remove a car from specific floor and position
   const handleCarDelete = (floorKey, index) => {
-    setFloors((prevFloors) => ({
-      ...prevFloors,
-      [floorKey]: prevFloors[floorKey].map((car, i) =>
-        i === index ? null : car
-      ),
-    }));
+    setFloors((prevFloors) => {
+      const updatedFloor = [...prevFloors[floorKey]];
+      updatedFloor[index] = null;
+
+      return {
+        ...prevFloors,
+        [floorKey]: updatedFloor,
+      };
+    });
   };
 
+  // Provide context values to child components
   return (
     <GarageContext.Provider
       value={{ floors, handleCarUpdate, handleCarDelete }}
