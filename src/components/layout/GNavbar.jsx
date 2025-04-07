@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logoSection">
-        <img src="/src/assets/logo-t.png" alt="Logo" width={80} height={80} />
+        <img src="/public/logo-t.png" alt="Logo" width={80} height={80} />
       </div>
       <div className="sideButtonsSection">
         <NavLink to="/" className="sideButton">
