@@ -154,11 +154,6 @@ main {
     gap: 1rem;
   }
 
-  .quickMenuButton {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.8rem;
-  }
-
   /* Landing Section */
   .landingSection h1 {
     font-size: 4rem;
@@ -267,24 +262,6 @@ main {
 
   .gCardModalContent {
     max-width: 55%;
-  }
-}
-
-@media (max-width: 600px) {
-  /* Navigation */
-  nav {
-    position: relative;
-  }
-
-  nav .quickMenuSection {
-    width: 100%;
-    justify-content: space-around;
-    bottom: -1rem;
-  }
-
-  .quickMenuButton {
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
   }
 }
 

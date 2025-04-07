@@ -15,17 +15,6 @@ const Navbar = () => {
           height={80}
         />
       </div>
-      <div className="quickMenuSection">
-        <NavLink to="/" className="quickMenuButton">
-          Home
-        </NavLink>
-        <a href="#features" className="quickMenuButton">
-          Features
-        </a>
-        <a href="#about" className="quickMenuButton">
-          About
-        </a>
-      </div>
       <div className="sideButtonsSection">
         <NavLink to="/garage" className="sideButton">
           <FontAwesomeIcon icon={faWarehouse} />

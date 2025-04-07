@@ -15,16 +15,6 @@ nav .logoSection {
   margin: 0 1.5rem;
 }
 
-nav .quickMenuSection {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 nav .sideButtonsSection {
   display: flex;
   align-items: center;
@@ -33,22 +23,14 @@ nav .sideButtonsSection {
   margin-right: 1rem;
 }
 
-.quickMenuButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.6rem 1rem;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-
 .sideButton {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  color: white;
+  transition: 0.6s;
+  text-decoration: none;
   background: transparent;
   font-size: 1.2rem;
   font-weight: 600;
@@ -57,14 +39,7 @@ nav .sideButtonsSection {
   overflow: hidden;
 }
 
-nav a {
-  color: white;
-  transition: 0.6s;
-  text-decoration: none;
-  position: relative;
-}
-
-nav a::before {
+.sideButton::before {
   content: "";
   position: absolute;
   margin: auto;
@@ -77,11 +52,11 @@ nav a::before {
   transition: 0.6s;
 }
 
-nav a:hover::before {
+.sideButton:hover::before {
   transform: scale(3);
 }
 
-nav a:hover {
+.sideButton:hover {
   color: #080808;
   transform: scale(1);
 }
