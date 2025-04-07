@@ -1,0 +1,131 @@
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 3840 2160%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cmask id=%22b%22 x=%220%22 y=%220%22 width=%223840%22 height=%222160%22%3E%3Cpath fill=%22url(%23a)%22 d=%22M0 0h3840v2160H0z%22%2F%3E%3C%2Fmask%3E%3Cpath fill=%22%23080808%22 d=%22M0 0h3840v2160H0z%22%2F%3E%3Cg style=%22transform-origin:center center%22 stroke=%22%23262626%22 stroke-width=%223.456%22 fill=%22none%22 mask=%22url(%23b)%22%3E%3Cpath d=%22M0 0h384v384H0zM384 0h384v384H384zM768 0h384v384H768zM1152 0h384v384h-384zM1536 0h384v384h-384zM1920 0h384v384h-384zM2304 0h384v384h-384zM2688 0h384v384h-384zM3072 0h384v384h-384zM3456 0h384v384h-384zM0 384h384v384H0zM384 384h384v384H384zM768 384h384v384H768zM1152 384h384v384h-384zM1536 384h384v384h-384zM1920 384h384v384h-384zM2304 384h384v384h-384zM2688 384h384v384h-384zM3072 384h384v384h-384zM3456 384h384v384h-384zM0 768h384v384H0zM384 768h384v384H384zM768 768h384v384H768zM1152 768h384v384h-384zM1536 768h384v384h-384zM1920 768h384v384h-384zM2304 768h384v384h-384zM2688 768h384v384h-384zM3072 768h384v384h-384zM3456 768h384v384h-384zM0 1152h384v384H0zM384 1152h384v384H384zM768 1152h384v384H768zM1152 1152h384v384h-384zM1536 1152h384v384h-384zM1920 1152h384v384h-384zM2304 1152h384v384h-384zM2688 1152h384v384h-384zM3072 1152h384v384h-384zM3456 1152h384v384h-384zM0 1536h384v384H0zM384 1536h384v384H384zM768 1536h384v384H768zM1152 1536h384v384h-384zM1536 1536h384v384h-384zM1920 1536h384v384h-384zM2304 1536h384v384h-384zM2688 1536h384v384h-384zM3072 1536h384v384h-384zM3456 1536h384v384h-384zM0 1920h384v384H0zM384 1920h384v384H384zM768 1920h384v384H768zM1152 1920h384v384h-384zM1536 1920h384v384h-384zM1920 1920h384v384h-384zM2304 1920h384v384h-384zM2688 1920h384v384h-384zM3072 1920h384v384h-384zM3456 1920h384v384h-384z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CradialGradient id=%22a%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23fff%22 stop-opacity=%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.aboutTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem;
+  gap: 0.5rem;
+}
+
+.aboutTitle h1 {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(white, rgba(255, 255, 255, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+.aboutTitle p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.aboutCardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.aboutCard {
+  width: 25rem;
+  height: 40rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutCard:first-child,
+.aboutCard:last-child {
+  margin-top: 5rem;
+}
+
+.aboutCardBg {
+  background-image: linear-gradient(
+    to right bottom,
+    #080808,
+    #0d0d0d,
+    #262626,
+    #333333,
+    #404040,
+    #595959,
+    #666666,
+    #737373,
+    #808080,
+    #8c8c8c,
+    #999999,
+    #b3b3b3,
+    #bfbfbf,
+    #cccccc,
+    #e6e6e6,
+    #f2f2f2,
+    #ffffff
+  );
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  height: 100%;
+  border-radius: 25px;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.aboutCard:hover .aboutCardBg {
+  background-position: 100% 100%;
+}
+
+.firstText {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  line-height: 2.5rem;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.secondText {
+  display: block;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  color: #080808;
+}
+
+.aboutCard:hover .firstText {
+  transform: translateY(-20px);
+  color: #080808;
+}
+
+.aboutCard:hover .secondText {
+  opacity: 1;
+}
+
+.aboutCard:nth-child(2) .aboutCardBg {
+  background-position: 100% 100%;
+}
+
+.aboutCard:nth-child(2) .firstText {
+  color: #080808;
+}

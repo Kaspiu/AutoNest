@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2rem;
+  padding: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

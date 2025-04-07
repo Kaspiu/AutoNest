@@ -1,0 +1,15 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #080808;
+  height: 100vh;
+}
+
+.spinner {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 0.3rem solid #262626;
+  border-top-color: white;
+}

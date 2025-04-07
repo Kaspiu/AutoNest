@@ -1,0 +1,68 @@
+.landingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.landingSection h1 {
+  font-size: 8rem;
+  font-weight: 800;
+  color: white;
+  transition: 0.3s;
+}
+
+.landingSection p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 40%;
+  line-height: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.landingSection a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  transition: 0.6s;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+}
+
+.landingSection a::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  transform: scale(0);
+  z-index: -1;
+  background-color: white;
+  transition: 0.6s;
+}
+
+.landingSection a:hover::before {
+  transform: scale(7);
+}
+
+.landingSection a:hover {
+  color: #080808;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
