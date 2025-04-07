@@ -21,8 +21,8 @@ const App = () => {
         <Loader />
       ) : (
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/garage" element={<Garage />} />
+          <Route path="/AutoNest" element={<Home />} />
+          <Route path="/AutoNest/garage" element={<Garage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       )}
