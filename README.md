@@ -6,8 +6,6 @@ A virtual garage website where car enthusiasts can build their personal car coll
 
 - **Add & Organize Your Cars**
 - **Detailed Car Stats**
-- **Customization & Tags**
-- **Compare Vehicles**
 
 ## Visit Website
 
