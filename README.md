@@ -9,8 +9,8 @@ A virtual garage website where car enthusiasts can build their personal car coll
 
 ## Visit Website
 
-- [AutoNest](https://kaspiu.github.io/AutoNest/)
+[AutoNest](https://kaspiu.github.io/AutoNest/)
 
-## Authors
+## Author
 
-- [@Kaspiu](https://github.com/Kaspiu)
+[@Kaspiu](https://github.com/Kaspiu)
